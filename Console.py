@@ -26,6 +26,7 @@ def Imput_dados():
     resultado_imput = fechar.upper()
     return resultado_imput
 
+
 resultado = Imput_dados()
 
 if resultado == 'S':

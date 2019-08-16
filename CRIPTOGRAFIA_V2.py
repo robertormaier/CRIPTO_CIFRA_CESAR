@@ -7,12 +7,12 @@ class Cripto:
         self.Todas_possibilidades = Todas_possibilidades
 
     def criptografia_descriptografia(self):
-      
+
         CARACTERES = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
         convertido = ''
         texto_convertido = ''
-  
+
         texto = self.texto.upper()
         modo = self.modo.upper()
         chave = self.chave
@@ -33,11 +33,11 @@ class Cripto:
                             num = num - len(CARACTERES)
                         elif num < 0:
                             num = num + len(CARACTERES)
-            
+
                         convertido = convertido + CARACTERES[num]
                     else:
                         convertido = convertido + caractere
-               
+
                 if modo == 'E':
                     texto_convertido = print(
                         'O texto criptografado é ', convertido, ' Chave ', str(chave))
@@ -48,9 +48,9 @@ class Cripto:
                 chave = chave + 1
                 convertido = ''
             return texto_convertido
-        elif Todas_possibilidades == 'N':          
+        elif Todas_possibilidades == 'N':
             for caractere in texto:
-                if caractere in CARACTERES:  
+                if caractere in CARACTERES:
                     num = CARACTERES.find(caractere)
                     if modo == 'E':
                         num = num + chave
@@ -63,7 +63,7 @@ class Cripto:
                     convertido = convertido + CARACTERES[num]
                 else:
                     convertido = convertido + caractere
-            
+
             if modo == 'E':
                 texto_convertido = print(
                     'O texto criptografado é ', convertido)
